@@ -1,0 +1,262 @@
+/* all */
+
+* {
+    --myBlack: #333;
+    --myGreen: #0ba39c;
+    --myGreenHover: #41c7c0;
+    --myBlue: #073471;
+    --myYellow: #CFCB4B;
+    --myOrange: #E5AE53;
+    --myRed: #D25742;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.active {
+    color: var(--myGreen);
+}
+
+nav a {
+    font-family: 'Staatliches', cursive;
+    text-decoration: none;
+    color: var(--myBlack);
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+nav a:hover {
+    color: var(--myGreen);
+} 
+
+nav li {
+    list-style-type: none;
+    display: inline;
+    padding: 2em;
+}
+
+nav ul {
+    padding: 0;
+}
+
+
+
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--myBlack);
+}
+
+.social-links {
+    padding: 10px;
+}
+
+.social-links a {
+    color: #999;
+}
+
+.fab {
+    padding: 10px 10px 0px 10px;
+    font-size: 25px;
+}
+
+.fab:hover {
+    color: #BBB;
+}
+
+footer p {
+    color: #bbb;
+}
+
+
+/* index */
+
+main {
+    display: grid;
+    /* grid-template-rows: repeat(4, 25%); */
+}
+
+.title {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 2em;
+    letter-spacing: 5px;
+    color: var(--myBlack);
+    background: white;
+    padding: 20px;
+    margin: 50px 55vw 20px 10vw;
+    display: inline flex;
+    flex-wrap: wrap;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url("images/beard-trim-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.hero p {
+    background: #333;
+    color: white;
+    font-size: 20px;
+    margin: auto 60vw 10px 10vw;
+    display: inline flex;
+    flex-wrap: wrap;
+}
+
+.button {
+    background: var(--myGreen);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px;
+    /* margin: 20px auto auto 50vw; */
+    margin: 50px 55vw 20px 10vw;
+}
+
+.button:hover {
+    background: var(--myGreenHover);
+}
+
+.button a {
+    text-decoration: none;
+}
+
+.beard-types {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+.beard-types img {
+    width: 20%;
+    margin: 10px;
+}
+
+/* about page */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.headline {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 2em;
+    letter-spacing: 5px;
+    padding: 10px;
+    color: white;
+    background: var(--myBlack);
+    width: max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.headline-2 {
+    font-family: 'Sansita Swashed', cursive;
+    letter-spacing: 5px;
+    padding: 10px;
+    color: var(--myBlack);
+}
+
+.about img {
+    width: 40%;
+}
+
+.about p {
+    text-align: justify;
+    margin: auto 15%;
+}
+
+.about p:last-of-type {
+    margin-bottom: 40px;
+}
+
+/* gallery page */
+
+.gallery {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+  
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+}
+
+
+/* contact page */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* blog */
+
+.read-more-button {
+    background: var(--myBlack);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px;
+    /* margin: 20px auto auto 50vw; */
+    /* margin: 50px 55vw 20px 10vw; */
+}
