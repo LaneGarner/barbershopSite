@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Sansita+Swashed:wght@600&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+    <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
     <title>Contact Beard People</title>
 </head>
@@ -21,22 +22,21 @@
         </nav>
     </header>
     <main class="contact">
+        <h1 class="headline">Let's keep in touch</h1>
         <form action="results.html" method="GET">
-            <h1 class="headline">Contact</h1>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="NAME" required><br>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email"><br>
-            <label for="phone">Phone number</label>
-            <input type="text" name="" id=""><br>
-            <label for="zip">Zipcode</label>
-            <input type="text" name="zip" id="zip"><br>
-            <label for="comments">Comments</label>
-            <textarea name="comments" id="comments"required></textarea><br>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" name="name" id="name" placeholder="NAME*" required><br>
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" name="email" id="email" placeholder="EMAIL*"><br>
+            <label for="phone" class="sr-only">Phone number</label>
+            <input type="text" name="" id="" placeholder="PHONE"><br>
+            <label for="zip" class="sr-only">Zipcode</label>
+            <input type="text" name="zip" id="zip" placeholder="ZIPCODE"><br>
+            <label for="comments" class="sr-only">Comments</label>
+            <textarea name="comments" id="comments"required placeholder="COMMENTS*" rows="10"></textarea><br>
+            <button type="submit" class="black-button">Submit</button>
+            <button type="reset" class="black-button reset-button">Reset</button>
         </form>
-        
         
     </main>
     <footer>

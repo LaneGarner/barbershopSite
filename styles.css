@@ -9,6 +9,7 @@
     --myOrange: #E5AE53;
     --myRed: #D25742;
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -16,6 +17,18 @@ body {
     margin: 0;
 }
 
+.spacer {
+    height: 40px;
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
 
 /* header */
 
@@ -86,16 +99,12 @@ footer {
 }
 
 footer p {
-    color: #bbb;
+    color: var(--myGreen);
+    font-style: italic;
 }
 
 
 /* index */
-
-main {
-    display: grid;
-    /* grid-template-rows: repeat(4, 25%); */
-}
 
 .title {
     font-family: 'Sansita Swashed', cursive;
@@ -122,7 +131,8 @@ main {
     background: #333;
     color: white;
     font-size: 20px;
-    margin: auto 60vw 10px 10vw;
+    margin: auto 50vw 10px 10vw;
+    padding: 10px;
     display: inline flex;
     flex-wrap: wrap;
 }
@@ -148,13 +158,26 @@ main {
 
 .beard-types {
     display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px auto;
 }
 
 .beard-types img {
-    width: 20%;
+    width: 300px;
     margin: 10px;
+}
+
+.beard-types p {
+    margin-top: 0;
+    text-align: center;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 19px;
+}
+
+.beard-types img:hover {
+    opacity: 0.7;
 }
 
 /* about page */
@@ -185,7 +208,7 @@ main {
 }
 
 .about img {
-    width: 40%;
+    width: 30%;
 }
 
 .about p {
@@ -197,6 +220,18 @@ main {
     margin-bottom: 40px;
 }
 
+.about .headline-2:nth-of-type(1) {
+    color: var(--myRed);
+}
+
+.about .headline-2:nth-of-type(2) {
+    color: var(--myBlue);
+}
+
+.about .headline-2:nth-of-type(3) {
+    color: var(--myOrange);
+}
+
 /* gallery page */
 
 .gallery {
@@ -204,6 +239,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.gallery img:hover {
+    opacity: 0.7;
 }
 
 .row {
@@ -225,14 +264,14 @@ main {
     width: 100%;
 }
   
-@media screen and (max-width: 800px) {
+@media (max-width: 768px) {
     .column {
       flex: 50%;
       max-width: 50%;
     }
 }
   
-@media screen and (max-width: 600px) {
+@media (max-width: 576px) {
     .column {
       flex: 100%;
       max-width: 100%;
@@ -246,17 +285,126 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
+
+input[type="text"], input[type="email"], textarea {
+    width: 60vw;
+    border: solid 3px #999;
+    padding: 10px;
+    text-align: center;
+}
+
+input:focus, textarea:focus {
+    border: solid 3px #333;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+}
+
+::placeholder {
+    text-align: center;
+    font-size: 18px;
+}
+
+.contact button {
+    cursor: pointer;
+}
+
 
 /* blog */
 
-.read-more-button {
+.black-button {
     background: var(--myBlack);
     color: white;
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
     padding: 20px;
+    border: none;
     /* margin: 20px auto auto 50vw; */
     /* margin: 50px 55vw 20px 10vw; */
+    margin: 10px;
+}
+
+.black-button:hover {
+    background: #444;
+    color: white;
+}
+
+.reset-button {
+    background: #AAA;
+    color: #333;
+    padding: 10px;
+}
+
+.blog-card {
+    display: flex;
+    /* align-items: center; */
+    margin: 30px 10%;
+    border: 1px solid #333;
+    height: 300px;
+}
+
+.blog-card h2 {
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.blog-card img {
+    /* width: 300px;
+    height: 300px;
+    object-fit: cover; */
+}
+
+.blog-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .blog-card-content {
+        padding: 10px;
+    }
+    .blog-card h2, .blog-card p {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-card {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .blog-card img {
+        margin-top: 40px;
+    }
+    .blog-card-content {
+        align-items: center;
+        padding: 20px;
+    }
+}
+  
+@media (max-width: 576px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
 }
