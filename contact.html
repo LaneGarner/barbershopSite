@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
     <title>Contact Beard People</title>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo"><img src="images/beard-people-logo.svg" alt="Beard People logo" id="logo"></a>
         <nav id='nav'>
-            <div id="veggie-burger">
+            <div id="veggie-burger" onclick="displayMenu()">
                 <i class="fas fa-angle-double-down"></i>
             </div>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="blog.html">Blog</a></li>
