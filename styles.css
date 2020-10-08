@@ -12,6 +12,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: var(--myGreen);
+    color: white;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -30,11 +35,15 @@ body {
     overflow:hidden;
     }
 
+.logo:hover {
+    color: red;
+}
+
 /* header */
 
 header {
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -44,6 +53,12 @@ header {
 
 .active {
     color: var(--myGreen);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav a {
@@ -69,8 +84,44 @@ nav ul {
     padding: 0;
 }
 
+#veggie-burger {
+    text-align: center;
+    margin-top: 20px;
+}
 
+#veggie-burger i {
+    font-size: 40px;
+    color: #333;
+}
 
+@media (min-width: 768px) {
+    #veggie-burger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #veggie-burger {
+        display: initial;
+    }
+    nav li {
+        padding: .5em;
+    }
+}
+
+@media (max-width: 576px) {
+    #logo {
+        width: 100px;
+    }
+    nav li {
+        font-size: 25;
+    }
+}
 
 /* footer */
 
@@ -101,6 +152,7 @@ footer {
 footer p {
     color: var(--myGreen);
     font-style: italic;
+    font-size: 14px;
 }
 
 
@@ -113,9 +165,10 @@ footer p {
     color: var(--myBlack);
     background: white;
     padding: 20px;
-    margin: 50px 55vw 20px 10vw;
+    margin: auto 55vw 20px 10vw;
     display: inline flex;
     flex-wrap: wrap;
+    border-radius: 2px;
 }
 
 .hero {
@@ -135,6 +188,7 @@ footer p {
     padding: 10px;
     display: inline flex;
     flex-wrap: wrap;
+    border-radius: 2px;
 }
 
 .button {
@@ -143,9 +197,10 @@ footer p {
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
-    padding: 20px;
+    padding: 1.2em;
     /* margin: 20px auto auto 50vw; */
     margin: 50px 55vw 20px 10vw;
+    border-radius: 30px;
 }
 
 .button:hover {
@@ -167,17 +222,41 @@ footer p {
 .beard-types img {
     width: 300px;
     margin: 10px;
+    border-radius: 2px;
+    opacity: 0.9;
 }
 
 .beard-types p {
     margin-top: 0;
     text-align: center;
     font-family: 'Sansita Swashed', cursive;
-    font-size: 19px;
+    font-size: 30px;
+    color: #333;
 }
 
 .beard-types img:hover {
-    opacity: 0.7;
+    opacity: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.2em;
+        margin: auto 40vw 20px 10vw;
+    }
+    /* .hero{
+        background-size: contain;
+    } */
+    .hero p {
+        font-size: 16px;
+    }
+    .button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+
 }
 
 /* about page */
@@ -193,11 +272,12 @@ footer p {
     font-family: 'Sansita Swashed', cursive;
     font-size: 2em;
     letter-spacing: 5px;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
     color: white;
     background: var(--myBlack);
     width: max-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 2px;
 }
 
 .headline-2 {
@@ -241,8 +321,14 @@ footer p {
     align-items: center;
 }
 
+.gallery img {
+    opacity: 0.9;
+    border-radius: 2px;
+}
+
 .gallery img:hover {
-    opacity: 0.7;
+    opacity: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .row {
@@ -334,17 +420,22 @@ form {
     /* margin: 20px auto auto 50vw; */
     /* margin: 50px 55vw 20px 10vw; */
     margin: 10px;
+    border-radius: 40px;
 }
 
 .black-button:hover {
-    background: #444;
+    background:#444;
     color: white;
 }
 
 .reset-button {
     background: #AAA;
     color: #333;
-    padding: 10px;
+    /* padding: 10px; */
+}
+
+.reset-button:hover {
+    background: tomato;
 }
 
 .blog-card {
@@ -353,6 +444,7 @@ form {
     margin: 30px 10%;
     border: 1px solid #333;
     height: 300px;
+    border-radius: 2px;
 }
 
 .blog-card h2 {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Sansita+Swashed:wght@600&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
     <title>Blog - Beard People</title>
@@ -12,7 +13,10 @@
 <body>
     <header>
         <a href="index.html" class="logo"><img src="images/beard-people-logo.svg" alt="Beard People logo" id="logo"></a>
-        <nav>
+        <nav id='nav'>
+            <div id="veggie-burger">
+                <i class="fas fa-angle-double-down"></i>
+            </div>
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -21,7 +25,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="animate__animated animate__fadeIn">
         <div class="flex">
             <h1 class="headline">Blog</h1>
         </div>
