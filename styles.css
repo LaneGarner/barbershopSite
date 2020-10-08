@@ -242,17 +242,19 @@ footer p {
 @media (max-width: 768px) {
     .title {
         font-size: 1.2em;
-        margin: auto 40vw 20px 10vw;
+        margin: auto 10vw 20px 10vw;
     }
     /* .hero{
         background-size: contain;
     } */
     .hero p {
         font-size: 16px;
+        margin: auto 10vw 20px 10vw;
     }
     .button {
         font-size: 14px;
     }
+
 }
 
 @media (max-width: 576px) {
