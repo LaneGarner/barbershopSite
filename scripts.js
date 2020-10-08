@@ -1,6 +1,12 @@
-const placeForResults = document.getElementById("results")
+const placeForResults = document.getElementById("results");
 
 new URLSearchParams(window.location.search).forEach((value, name) => {
   placeForResults.append(`${name} : ${value}`)
   placeForResults.append(document.createElement("br"))
 })
+
+
+function displayMenu() {
+  const veggieBurgerMenu = document.getElementById("nav-menu");
+  veggieBurgerMenu.style.display = "flex";
+}

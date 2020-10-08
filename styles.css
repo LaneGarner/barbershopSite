@@ -86,7 +86,7 @@ nav ul {
 
 #veggie-burger {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 
 #veggie-burger i {
@@ -108,6 +108,9 @@ nav ul {
     }
     #veggie-burger {
         display: initial;
+    }
+    #nav-menu {
+        display: none;
     }
     nav li {
         padding: .5em;
@@ -254,7 +257,6 @@ footer p {
     .button {
         font-size: 14px;
     }
-
 }
 
 @media (max-width: 576px) {
