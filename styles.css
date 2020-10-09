@@ -33,7 +33,7 @@ body {
     width:1px;
     height:1px;
     overflow:hidden;
-    }
+}
 
 .logo:hover {
     color: red;
@@ -47,8 +47,10 @@ header {
     align-items: center;
 }
 
-.logo {
+#logo {
     margin-top: 20px;
+    width: 100%;
+    height: auto;
 }
 
 .active {
@@ -94,9 +96,16 @@ nav ul {
     color: #333;
 }
 
+.show {
+    display: inline;
+}
+
 @media (min-width: 768px) {
     #veggie-burger {
         display: none;
+    }
+    #nav-menu {
+        display: block;
     }
 }
 
@@ -115,14 +124,17 @@ nav ul {
     nav li {
         padding: .5em;
     }
+    /* #logo {
+        width: 8em;
+    } */
 }
 
 @media (max-width: 576px) {
     #logo {
-        width: 100px;
+        /* width: 130px; */
     }
     nav li {
-        font-size: 25;
+        font-size: 25px;
     }
 }
 
@@ -133,10 +145,12 @@ footer {
     flex-direction: column;
     align-items: center;
     background-color: var(--myBlack);
+    padding-bottom: 8px;
 }
 
 .social-links {
     padding: 10px;
+    margin-top: 10px;
 }
 
 .social-links a {
@@ -168,10 +182,12 @@ footer p {
     color: var(--myBlack);
     background: white;
     padding: 20px;
-    margin: auto 55vw 20px 10vw;
+    margin: 20px 55vw 30px 10vw;
     display: inline flex;
     flex-wrap: wrap;
     border-radius: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 
 .hero {
@@ -187,11 +203,13 @@ footer p {
     background: #333;
     color: white;
     font-size: 20px;
-    margin: auto 50vw 10px 10vw;
+    margin: auto 55vw 20px 10vw;
     padding: 10px;
     display: inline flex;
     flex-wrap: wrap;
     border-radius: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 
 .button {
@@ -204,6 +222,7 @@ footer p {
     /* margin: 20px auto auto 50vw; */
     margin: 50px 55vw 20px 10vw;
     border-radius: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .button:hover {
@@ -247,9 +266,9 @@ footer p {
         font-size: 1.2em;
         margin: auto 10vw 20px 10vw;
     }
-    /* .hero{
-        background-size: contain;
-    } */
+    .hero{
+        background: #333;
+    }
     .hero p {
         font-size: 16px;
         margin: auto 10vw 20px 10vw;
@@ -455,10 +474,8 @@ form {
     font-family: 'Sansita Swashed', cursive;
 }
 
-.blog-card img {
-    /* width: 300px;
-    height: 300px;
-    object-fit: cover; */
+.blog-card img:hover {
+    opacity: 0.95;
 }
 
 .blog-card-content {
