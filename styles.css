@@ -8,12 +8,12 @@
     --myYellow: #CFCB4B;
     --myOrange: #E5AE53;
     --myRed: #D25742;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
     box-sizing: border-box;
 }
 
 ::selection {
-    background-color: var(--myGreen);
+    background-color: var(--myYellow);
     color: white;
 }
 
@@ -23,16 +23,16 @@ body {
 }
 
 .spacer {
-    height: 40px;
+    height: 30px;
 }
 
 .sr-only {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .logo:hover {
@@ -64,7 +64,7 @@ nav {
 }
 
 nav a {
-    font-family: 'Staatliches', cursive;
+    font-family: 'Staatliches' , sans-serif;
     text-decoration: none;
     color: var(--myBlack);
     font-size: 30px;
@@ -100,7 +100,7 @@ nav ul {
     display: inline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     #veggie-burger {
         display: none;
     }
@@ -109,7 +109,7 @@ nav ul {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     nav ul {
         display: flex;
         flex-direction: column;
@@ -124,9 +124,9 @@ nav ul {
     nav li {
         padding: .5em;
     }
-    /* #logo {
+    #logo {
         width: 8em;
-    } */
+    }
 }
 
 @media (max-width: 576px) {
@@ -138,45 +138,10 @@ nav ul {
     }
 }
 
-/* footer */
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--myBlack);
-    padding-bottom: 8px;
-}
-
-.social-links {
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.social-links a {
-    color: #999;
-}
-
-.fab {
-    padding: 10px 10px 0px 10px;
-    font-size: 25px;
-}
-
-.fab:hover {
-    color: #BBB;
-}
-
-footer p {
-    color: var(--myGreen);
-    font-style: italic;
-    font-size: 14px;
-}
-
-
 /* index */
 
 .title {
-    font-family: 'Sansita Swashed', cursive;
+    font-family: 'Sansita Swashed', sans-serif;
     font-size: 2em;
     letter-spacing: 5px;
     color: var(--myBlack);
@@ -213,20 +178,21 @@ footer p {
 }
 
 .button {
-    background: var(--myGreen);
+    /* background: var(--myGreen); */
+    background: linear-gradient(#99dfdb, #41c7c0);
     color: white;
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
     padding: 1.2em;
-    /* margin: 20px auto auto 50vw; */
-    margin: 50px 55vw 20px 10vw;
+    margin: auto 55vw 20px 10vw;
     border-radius: 30px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
 }
 
 .button:hover {
-    background: var(--myGreenHover);
+    /* background: var(--myGreenHover); */
+    background: linear-gradient (#41c7c0, #00fff2);
 }
 
 .button a {
@@ -261,28 +227,11 @@ footer p {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 768px) {
-    .title {
-        font-size: 1.2em;
-        margin: auto 10vw 20px 10vw;
-    }
-    .hero{
-        background: #333;
-    }
-    .hero p {
-        font-size: 16px;
-        margin: auto 10vw 20px 10vw;
-    }
-    .button {
-        font-size: 14px;
-    }
+.man-having-beard-trimmed {
+    display: none;
 }
 
-@media (max-width: 576px) {
-
-}
-
-/* about page */
+/* about section */
 
 .about {
     display: flex;
@@ -292,7 +241,7 @@ footer p {
 }
 
 .headline {
-    font-family: 'Sansita Swashed', cursive;
+    font-family: 'Sansita Swashed' , sans-serif;
     font-size: 2em;
     letter-spacing: 5px;
     padding: 0px 10px 10px 10px;
@@ -304,10 +253,14 @@ footer p {
 }
 
 .headline-2 {
-    font-family: 'Sansita Swashed', cursive;
+    font-family: 'Sansita Swashed' , sans-serif;
     letter-spacing: 5px;
     padding: 10px;
     color: var(--myBlack);
+}
+
+#we-are-beard-people {
+    padding-left: 60vw;
 }
 
 .about img {
@@ -334,6 +287,49 @@ footer p {
 .about .headline-2:nth-of-type(3) {
     color: var(--myOrange);
 }
+
+#index-read-more-btn {
+    text-align: center; 
+}
+
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.2em;
+        margin: auto 10vw 20px 10vw;
+    }
+    .hero {
+        background: #333;
+    }
+    .hero p {
+        font-size: 16px;
+        margin: auto 15vw 20px 15vw;
+        box-shadow: none;
+    }
+    .hero .spacer:nth-of-type(1) {
+        display: none;
+    }
+    .button {
+        font-size: 14px;
+    }
+    .man-having-beard-trimmed {
+        display: block;
+        width: 100vw;
+        margin-top: 0;
+    }
+    #index-read-more-btn {
+        margin-top: 90px;
+    }
+    #we-are-beard-people {
+        padding-left: 10px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+}
+
+
+
 
 /* gallery page */
 
@@ -373,7 +369,7 @@ footer p {
     width: 100%;
 }
   
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .column {
       flex: 50%;
       max-width: 50%;
@@ -471,7 +467,7 @@ form {
 }
 
 .blog-card h2 {
-    font-family: 'Sansita Swashed', cursive;
+    font-family: sans-serif;
 }
 
 .blog-card img:hover {
@@ -491,16 +487,22 @@ form {
     justify-content: center;
 }
 
-@media (max-width: 900px) {
+#load-more {
+    font-size: 50px;
+    color: #555;
+    margin-top: 30px;
+}
+
+/* @media (max-width: 900px) {
     .blog-card-content {
         padding: 10px;
     }
     .blog-card h2, .blog-card p {
         margin-bottom: 10px;
     }
-}
+} */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .blog-card {
         flex-direction: column;
         height: auto;
@@ -520,4 +522,38 @@ form {
       flex: 100%;
       max-width: 100%;
     }
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--myBlack);
+    padding-bottom: 8px;
+}
+
+.social-links {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #999;
+}
+
+.fab {
+    padding: 10px 10px 0px 10px;
+    font-size: 25px;
+}
+
+.fab:hover {
+    color: #BBB;
+}
+
+footer p {
+    color: var(--myGreen);
+    font-style: italic;
+    font-size: 14px;
 }
