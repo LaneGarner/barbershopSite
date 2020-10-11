@@ -35,10 +35,6 @@ body {
     overflow: hidden;
 }
 
-.logo:hover {
-    color: red;
-}
-
 img {
     border-radius: 2px;
 }
@@ -49,6 +45,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #logo {
@@ -75,7 +72,6 @@ nav a {
     padding: 10px;
 }
 
-
 nav a:hover {
     color: var(--myGreen);
 } 
@@ -98,10 +94,6 @@ nav ul {
 #veggie-burger i {
     font-size: 40px;
     color: #333;
-}
-
-.show {
-    display: inline;
 }
 
 @media (min-width: 600px) {
@@ -133,15 +125,6 @@ nav ul {
     }
 }
 
-@media (max-width: 576px) {
-    #logo {
-        /* width: 130px; */
-    }
-    nav li {
-        font-size: 25px;
-    }
-}
-
 /* index */
 
 .title {
@@ -156,7 +139,6 @@ nav ul {
     flex-wrap: wrap;
     border-radius: 2px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
 }
 
 .hero {
@@ -166,7 +148,6 @@ nav ul {
     background-size: cover;
     background-attachment: fixed;
 }
-
 
 .hero p {
     background: #333;
@@ -178,11 +159,9 @@ nav ul {
     flex-wrap: wrap;
     border-radius: 2px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
 }
 
 .button {
-    /* background: var(--myGreen); */
     background: linear-gradient(#99dfdb, #41c7c0);
     color: white;
     font-size: 18px;
@@ -191,11 +170,10 @@ nav ul {
     padding: 1.2em;
     margin: auto 55vw 20px 10vw;
     border-radius: 30px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
 }
 
 .button:hover {
-    /* background: var(--myGreenHover); */
+    background: var(--myGreenHover);
     background: linear-gradient (#41c7c0, #00fff2);
 }
 
@@ -263,6 +241,18 @@ nav ul {
     color: var(--myBlack);
 }
 
+.red {
+    color: var(--myRed);
+}
+
+.blue {
+    color: var(--myBlue);
+}
+
+.orange {
+    color: var(--myOrange);
+}
+
 .about img {
     width: 30%;
 }
@@ -292,7 +282,6 @@ nav ul {
     text-align: center; 
 }
 
-
 @media (max-width: 600px) {
     .title {
         font-size: 1.2em;
@@ -320,16 +309,7 @@ nav ul {
     #index-read-more-btn {
         margin-top: 90px;
     }
-    #we-are-beard-people {
-        padding-left: 10px;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    
 }
-
-
-
 
 /* gallery page */
 
@@ -398,9 +378,11 @@ input[type="text"], input[type="email"], textarea {
     border: solid 3px #999;
     padding: 10px;
     text-align: center;
+    font-size: 18px;
+    color: #333;
 }
 
-input:focus::placeholder {
+input:focus::placeholder, textarea:focus::placeholder {
     color: transparent;
   }
 
@@ -440,8 +422,6 @@ form {
     text-decoration: none;
     padding: 20px;
     border: none;
-    /* margin: 20px auto auto 50vw; */
-    /* margin: 50px 55vw 20px 10vw; */
     margin: 10px;
     border-radius: 40px;
 }
@@ -454,7 +434,6 @@ form {
 .reset-button {
     background: #AAA;
     color: #333;
-    /* padding: 10px; */
 }
 
 .reset-button:hover {
@@ -463,7 +442,6 @@ form {
 
 .blog-card {
     display: flex;
-    /* align-items: center; */
     margin: 30px 10%;
     border: 1px solid #333;
     height: 300px;
@@ -495,22 +473,21 @@ form {
     font-size: 50px;
     color: #555;
     margin-top: 30px;
-    animation: pulse;
-    animation-duration: infinite;
     display: flex;
     justify-content: center;
 }
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
     .blog-card-content {
         padding: 10px;
     }
     .blog-card h2, .blog-card p {
-        margin-bottom: 10px;
-    }
-} */
+        margin-bottom: 0px;
 
-@media (max-width: 600px) {
+    }
+}
+
+@media (max-width: 700px) {
     .blog-card {
         flex-direction: column;
         height: auto;
@@ -525,7 +502,7 @@ form {
     }
 }
   
-@media (max-width: 576px) {
+@media (max-width: 700px) {
     .column {
       flex: 100%;
       max-width: 100%;

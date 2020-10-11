@@ -10,11 +10,6 @@ function displayMenu() {
   console.log('click');
   console.log(veggieBurgerMenu.style.display);
 
-  // window.onload = (event) => {
-  //   veggieBurgerMenu.style.display = "none";
-  // }
-  // veggieBurgerMenu.style.display == "none";
-
   if (veggieBurgerMenu.style.display === "none" || veggieBurgerMenu.style.display == "") {
   veggieBurgerMenu.style.display = "flex";
   } else {
