@@ -39,6 +39,10 @@ body {
     color: red;
 }
 
+img {
+    border-radius: 2px;
+}
+
 /* header */
 
 header {
@@ -105,7 +109,7 @@ nav ul {
         display: none;
     }
     #nav-menu {
-        display: block;
+        display: flex;
     }
 }
 
@@ -259,10 +263,6 @@ nav ul {
     color: var(--myBlack);
 }
 
-#we-are-beard-people {
-    padding-left: 60vw;
-}
-
 .about img {
     width: 30%;
 }
@@ -400,6 +400,10 @@ input[type="text"], input[type="email"], textarea {
     text-align: center;
 }
 
+input:focus::placeholder {
+    color: transparent;
+  }
+
 input:focus, textarea:focus {
     border: solid 3px #333;
     outline: none;
@@ -487,10 +491,14 @@ form {
     justify-content: center;
 }
 
-#load-more {
+.load-more {
     font-size: 50px;
     color: #555;
     margin-top: 30px;
+    animation: pulse;
+    animation-duration: infinite;
+    display: flex;
+    justify-content: center;
 }
 
 /* @media (max-width: 900px) {

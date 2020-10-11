@@ -6,13 +6,19 @@ new URLSearchParams(window.location.search).forEach((value, name) => {
 })
 
 function displayMenu() {
-  const veggieBurgerMenu = document.getElementById("nav-menu");
+  const veggieBurgerMenu = document.querySelector("#nav-menu");
   console.log('click');
   console.log(veggieBurgerMenu.style.display);
-  
-  if (veggieBurgerMenu.style.display == "none" || veggieBurgerMenu.style.display == undefined) {
+
+  // window.onload = (event) => {
+  //   veggieBurgerMenu.style.display = "none";
+  // }
+  // veggieBurgerMenu.style.display == "none";
+
+  if (veggieBurgerMenu.style.display === "none" || veggieBurgerMenu.style.display == "") {
   veggieBurgerMenu.style.display = "flex";
   } else {
     veggieBurgerMenu.style.display = "none";
   }
+
 }
